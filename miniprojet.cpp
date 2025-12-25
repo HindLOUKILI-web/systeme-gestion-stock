@@ -127,7 +127,7 @@ void supprimerProduit(Produit **l, int id) {
     while(courant && courant->id!=id){ 
 	    prec=courant;courant=courant->suivant;
 	}
-    if(!courant) return;//je peux ajouter printf('produit introuvable donc impossible de supprimer')
+    if(!courant) return;
     if(!prec) *l=courant->suivant;
     else prec->suivant=courant->suivant;
     free(courant);
